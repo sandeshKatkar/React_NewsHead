@@ -19,7 +19,17 @@ export default class NewsItem extends Component{
         return(
             <div>
                 <div className="card mx-2" style={{height:"516px"}}>
-                <span className="position-absolute translate-middle badge rounded-pill bg-success" style={{left:'15%',top:"4%"}}>{source}</span>
+                    
+                <div style={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        position: 'absolute',
+                        left: '1%',
+                        marginTop:'5px'
+                    }
+                    }>
+                     <span className="position-absolute translate-start badge rounded-pill bg-success">{source}</span>
+                </div>        
                     <img src={imgUrl?imgUrl:defaultNewsImg} className="card-img-top" alt="..." style={{width:"100%",height:"250px"}}/>
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>

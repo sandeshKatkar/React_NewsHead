@@ -31,14 +31,13 @@ export default class News extends Component{
 
     newsUpdate=async()=>{
         let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3807b3b4bdba43aa8b1f6fc9e0f30932&page=${this.state.page}&pageSize=${this.props.pagesize}`;
-        this.setState({loading:true});
+       // this.setState({loading:true});
         let data=await fetch(url);
         let parsedData=await data.json();
-        console.log("data parsed");
         this.setState({articles:parsedData.articles,totalResults:parsedData.totalResults,loading:false});
     }
      async componentDidMount(props){
-        console.log("componentdidmount");
+        
        this.newsUpdate();
     }
 
@@ -77,9 +76,9 @@ export default class News extends Component{
 // }
 
 fetchMoreData = async () => {   
-    console.log("cfetch date");
+    
     this.setState({page:this.state.page+1})
-    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3807b3b4bdba43aa8b1f6fc9e0f30932&page=${this.state.page}&pageSize=${this.props.pagesize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3807b3b4bdba43aa8b1f6fc9e0f30932&page=${this.state.page+1}&pageSize=${this.props.pagesize}`;
     // this.setState({loading:true});
     let data=await fetch(url);
     let parsedData=await data.json();
@@ -94,9 +93,10 @@ fetchMoreData = async () => {
     render(){
         
         return(
+            <>
             <div className="container" style={{marginTop:"65px"}}>
-                {/* // <> */}
-                <h1 className="my-4 text-center">{this.capitalizeFirstLetter(this.props.category)} - News Headings</h1>
+                
+                <h3 className="my-4 text-center">{this.capitalizeFirstLetter(this.props.category)} - News Headings</h3>
                {this.state.loading && <Spinner/>}
               
               
@@ -139,6 +139,7 @@ fetchMoreData = async () => {
                 <button disabled={this.state.page+1>Math.ceil(this.state.totalResults/this.props.pagesize)}className="btn btn-dark" onClick={this.handleNextClick}>Next</button>
               </div> */}
             </div>
+            </>
             
         )
     }

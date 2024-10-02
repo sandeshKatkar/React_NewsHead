@@ -10,7 +10,7 @@ export default class Navbar extends Component{
             <div>
               <nav className="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
-                  <Link className="navbar-brand" to="/">News Nectar</Link>
+                  <Link className="navbar-brand" to="/">NewsHead</Link>
                   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                   </button>
@@ -19,14 +19,14 @@ export default class Navbar extends Component{
                       <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                       </li>
-                      <li className="nav-item"><Link className="nav-link" to="/">About</Link></li>
-                      {/* <li className="nav-item"><Link className="nav-link" to="/general" >General</Link></li> */}
+                      
                       <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
                       <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
                       <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
                       <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
                       <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>     
+                      <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>   
+                      <li className="nav-item"><Link className="nav-link" to="/about">About us</Link></li>  
                     </ul>
                   </div>
                 </div>
