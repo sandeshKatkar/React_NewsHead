@@ -24,11 +24,12 @@ export default class NewsItem extends Component{
                         display: 'flex',
                         justifyContent: 'flex-start',
                         position: 'absolute',
-                        left: '1%',
-                        marginTop:'5px'
+                        left: '0%',
+                        marginTop:'0px',
+                        
                     }
                     }>
-                     <span className="position-absolute translate-start badge rounded-pill bg-success">{source}</span>
+                     <span className="position-absolute translate-start badge bg-success" style={{borderTopRightRadius:'10px',borderBottomRightRadius:'10px'}}>{source}</span>
                 </div>        
                     <img src={imgUrl?imgUrl:defaultNewsImg} className="card-img-top" alt="..." style={{width:"100%",height:"250px"}}/>
                     <div className="card-body">

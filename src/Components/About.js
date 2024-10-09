@@ -3,15 +3,13 @@ import React,{Component} from 'react';
 export default class About extends Component{
     render(){
         return(
-            <div className='container' style={{marginTop:"150px"}}>
-                
-
+            <div className='container' style={{marginTop:"150px"}}>                
                 <div className="card text-center">
-                    <div className="card-header">
+                    <div className="card-header bg-dark text-light">
                         About US
                     </div>
                     <div className="card-body">
-                        <h5 className="card-title">NewsHead</h5>
+                        <h5 className="card-title" style={{fontWeight:'500',color:'yellow',backgroundColor:'black',width:'100px',padding:'5px',borderRadius:'5px',margin:'10px auto'}}>N<small>ews</small>H<small>ead</small></h5>
                         <p className="card-text">
 
                             Welcome to <strong>NewsHead</strong>, your essential source for the latest news headlines across diverse categories, including entertainment, science, technology, health, business, and sports. We understand the importance of staying informed, and our mission is to simplify that process for you.
@@ -23,7 +21,7 @@ export default class About extends Component{
                         </p>
                         
                     </div>
-                    <div className="card-footer text-body-secondary">
+                    <div className="card-footer text-body-secondary bg-dark text-light">
                         Email : NewsHead2024@gmail.com
                     </div>
                 </div>
